@@ -203,11 +203,14 @@ class RecaptchaField extends SpamProtectorField {
 		$extraClass = $this->XML_val('extraClass');
 		$Name = $this->XML_val('Name');
 		$Field = $this->XML_val('Field');
+
+		//DM: 'liberated' from FormField.php:
+		$titleBlock = (!empty($Title)) ? "<label class=\"left\" for=\"{$this->id()}\">$Title</label>" : "";
 		
 		$messageBlock = (!empty($Message)) ? "<span class=\"message $MessageType\">$Message</span>" : "";
 
 		return <<<HTML
-<div id="$Name" class="field $Type $extraClass">{$Field}{$messageBlock}</div>
+<div id="$Name" class="field $Type $extraClass">{$titleBlock}{$Field}{$messageBlock}</div>
 HTML;
 	}
 	
