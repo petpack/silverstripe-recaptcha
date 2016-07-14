@@ -20,7 +20,7 @@ class RecaptchaProtector implements SpamProtector {
 	/**
 	 * Needed for the interface. Recaptcha does not have a feedback loop
 	 *
-	 * @return boolean
+	 * @return SS_Boolean
 	 */
 	function sendFeedback($object = null, $feedback = "") {
 		return false;

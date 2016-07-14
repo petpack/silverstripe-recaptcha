@@ -26,7 +26,7 @@ class RecaptchaField extends SpamProtectorField {
 	/**
 	 * Use secure connection for API-calls
 	 *
-	 * @var boolean
+	 * @var SS_Boolean
 	 */
 	public $useSSL = false;
 	
@@ -57,7 +57,7 @@ class RecaptchaField extends SpamProtectorField {
 	 * Use Ajax instead of iframe inclusion.
 	 * 
 	 * @see http://recaptcha.net/apidocs/captcha/client.html
-	 * @var boolean
+	 * @var SS_Boolean
 	 */
 	public $useAjaxAPI = false;
 	
@@ -239,7 +239,7 @@ HTML;
 	 *
 	 * @todo implement socket timeout handling (or switch to curl?)
 	 * @param Validator $validator
-	 * @return boolean
+	 * @return SS_Boolean
 	 */
 	public function validate($validator) {
 		// don't bother querying the recaptcha-service if fields were empty
